@@ -1,9 +1,15 @@
 name-template: 'v$NEXT_PATCH_VERSION 🌈'
 tag-template: 'v$NEXT_PATCH_VERSION'
 categories:
-  - title: 'Enhancements'
-    label: 'enhancement'
-  - title: 'Bugfixes'
+  - title: 'Added'
+    label: 'added'
+  - title: 'Changed'
+    label: 'changed'
+  - title: 'Deprecated'
+    label: 'deprecated'
+   - title: 'Removed'
+    label: 'removed'
+   - title: 'Fixed'
     label: 'bug'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 template: |
