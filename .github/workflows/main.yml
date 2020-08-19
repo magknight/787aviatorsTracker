@@ -1,0 +1,21 @@
+on:
+  issue_comment:
+    types: [created, deleted]
+
+name: Discord Notification
+
+jobs:
+  notify:
+    name: Discord Notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: binotaliu/action-discord-notifier@v1
+        with:
+          message-title: |
+            **v1.9.1** has been released - go get it from the updater release branch
+            ```md
+            - stuff goes here
+            ```
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
